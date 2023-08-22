@@ -1,0 +1,281 @@
+<html>
+<head>
+	<title>Responsive Page</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+
+	<div id="menu-btn" class="fas fa-bars"></div>
+
+	
+	
+	<nav class="navbar">
+	<a href="#home">HOME</a>
+	<a href="vehicles.php">VECHICLES</a>
+	<a href="#services">SERVICES</a>
+	<a href="featured.php">FEATURED</a>
+	<a href="#contact">CONTACT</a>
+	</nav>
+
+	<a href="#" class="logo"> <span>Rental</span>wheels</a>
+
+	<div id="login-btn">
+		<!-- <?php
+			
+			session_start();
+			if(isset($_SESSION['username'])) {
+			
+			?>
+			<p>Welcome <?php echo $_SESSION['username']; ?>!</p>
+			<p>You are now logged in.</p>
+			<?php
+			} 
+			else { -->
+			<button class="btn">LOGIN</button>
+			<i class="far fa-user"></i>
+		<!-- ?> -->
+		
+	</div>
+</header>
+
+<!-- login form -->
+<div class="login-form-container">
+
+	<span class="fas fa-times" id="close-login-form"></span>
+	<form action="login.php" method="post">
+		<h3>user login</h3>
+		<input type="email" placeholder= "email" class="box" name="email">
+		<input type="password" placeholder= "password" class="box" name="password">
+		<p>forget your password<a href="#">click here</a></p>
+		<input type="submit" value="login now" class="btn">
+		<p>or login with</p>
+		<div class="buttons">
+			<a href="#" class="btn">google</a>
+			<a href="#" class="btn">facebook</a>
+		</div>
+		<p>don't have an account <a href="#" id="reg-btn">create one</a></p>
+	</form>
+</div>
+
+
+<div class="reg-form-container">
+
+	<span class="fas fa-times" id="close-reg-form"></span>
+	<form action="reg.php" method="post">
+		<h3>registration</h3>
+		<input type="text" placeholder= "user name" class="box" name="user_name">
+		<input type="email" placeholder= "email" class="box" name="email">
+		<input type="text" placeholder= "licence no." class="box" oninput="this.value=this.value.toUpperCase()" name="licence">
+		<!-- it will send the data in capital -->
+		<input type="number" placeholder= "mobile number" class="box" name="mobile_number">
+		<input type="password" placeholder= "password" class="box" name="password">
+		<input type="submit" value="sign up" class="btn">
+		<p>or signup with</p>
+		<div class="buttons">
+			<a href="#" class="btn">google</a>
+			<a href="#" class="btn">facebook</a>
+		</div>
+		<p>have an account ? <a href="#" id="log-btn">log in</a></p>
+	</form>
+</div>
+
+
+<!-- script for tansition -->
+<script>
+	document.querySelector("#log-btn").onclick = () => {
+	document.querySelector('.login-form-container').classList.toggle('active');
+	document.querySelector('.reg-form-container').classList.remove('active');
+}</script>
+<!-- end  -->
+
+
+
+<!-- home section -->
+<section id="home1">
+	<!-- <h1><span style="color: wheat;">FIN</span><span style="color:orange;">D</span></h1>
+	
+	<h1><span style="color: wheat;">YO</span><span style="color: orange;">UR</span></h1>
+	
+	<h1><span style="color: wheat;">WH</span><span style="color: orange;">EEL</span></h1> -->
+	<a href="vehicles.php" class="btn" style="padding:  .8rem 3rem;position: absolute;bottom: 20%;left: 45%;">EXPLORE</a>
+</section>
+
+
+<!-- icons -->
+<section class="icons-container" style=" margin-top: 5%;">
+	<div class="icons">
+		<i class="fas fa-home"></i>
+		<div class="content">
+			<h3>150+</h3>
+			<p>branches</p>
+		</div>
+	</div>
+
+
+	<div class="icons">
+		<i class="fas fa-car"></i>
+		<div class="content">
+			<h3>2000+</h3>
+			<p>cars sold</p>
+		</div>
+	</div>
+
+
+	<div class="icons">
+		<i class="fas fa-users"></i>
+		<div class="content">
+			<h3>550+</h3>
+			<p>happy clients</p>
+		</div>
+	</div>
+
+	<div class="icons">
+		<i class="fas fa-car"></i>
+		<div class="content">
+			<h3>200+</h3>
+			<p>new cars</p>
+		</div>
+	</div>
+
+</section>
+
+<!-- service section -->
+<section class="services" id="services">
+	<h1 class="heading">our<span>services</span></h1>
+	<div class="box-container" style="margin-left:5%;margin-right: 5%;">
+
+		<div class="box">
+			<i class="fas fa-car"></i>
+			<h3>car selling</h3>
+			<p>Some text....</p>
+			<a href="#" class="btn">readmore</a>
+		</div>
+
+		<div class="box">
+			<i class="fas fa-tools"></i>
+			<h3>Parts repairing</h3>
+			<p>Some text....</p>
+			<a href="#" class="btn">readmore</a>
+		</div>
+
+		<div class="box">
+			<i class="fas fa-car-crash"></i>
+			<h3>car insurance</h3>
+			<p>Some text....</p>
+			<a href="#" class="btn">readmore</a>
+		</div>
+
+		<div class="box">
+			<i class="fas fa-car-battery"></i>
+			<h3>battery replacement</h3>
+			<p>Some text....</p>
+			<a href="#" class="btn">readmore</a>
+		</div>
+
+		<div class="box">
+			<i class="fas fa-gas-pump"></i>
+			<h3>oil change</h3>
+			<p>Some text....</p>
+			<a href="#" class="btn">readmore</a>
+		</div>
+
+
+		<div class="box">
+			<i class="fas fa-headset"></i>
+			<h3>24/7 support</h3>
+			<p>Some text....</p>
+			<a href="#" class="btn">readmore</a>
+		</div>
+
+	</div>
+
+</section>
+
+<div>
+
+</div>
+<!-- contact -->
+<section class="contact" id="contact" style="margin-top: 5rem;">
+
+	<h1 class="heading"><span>contact</span> us</h1>
+	<div class="row">
+
+		<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.5489569663323!2d81.60283504967356!3d21.249727185506487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dde213f66723%3A0x21543965c50c43c7!2sNational%20Institute%20of%20Technology(NIT)%2C%20Raipur!5e0!3m2!1sen!2sin!4v1679813116823!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
+		</iframe>
+	
+		<form action="">
+			<h3>get in touch</h3>
+			<input type="text" placeholder="name" class="box">
+			<input type="email" placeholder="email" class="box">
+			<input type="number" placeholder="number" class="box">
+			<textarea placeholder="message" class="box" cols="30" rows="10"></textarea>
+			<input type="submit" value="send message" class="btn">
+		</form>
+	
+	</div>
+	
+</section>
+
+
+
+
+<!-- footer -->
+
+<section class="footer" style="margin-top: 5rem;">
+	<div class="box-container">
+
+		<div class="box" style="margin-left: 10%;">
+			<h3>our branches</h3>
+			<a href="#"> <i class="fas fa-map-marker-alt"></i> india</a>
+			<a href="#"> <i class="fas fa-map-marker-alt"></i> thailand</a>
+			<a href="#"> <i class="fas fa-map-marker-alt"></i> srilanka</a>
+			<a href="#"> <i class="fas fa-map-marker-alt"></i> indonesia</a>
+			<a href="#"> <i class="fas fa-map-marker-alt"></i> philipeans</a>
+			<a href="#"> <i class="fas fa-map-marker-alt"></i> syngapore</a>
+		</div>
+
+		<div class="box">
+			<h3>quick links</h3>
+			<a href="#"> <i class="fas fa-arrow-right"></i> home</a>
+			<a href="vehicles.php"> <i class="fas fa-arrow-right"></i> vehicles</a>
+			<a href="featured.php"> <i class="fas fa-arrow-right"></i> Featured</a>
+			<a href="#services"> <i class="fas fa-arrow-right"></i> services</a>
+			<a href="#contact"> <i class="fas fa-arrow-right"></i> contact</a>
+			
+		</div>
+
+
+		<div class="box">
+			<h3>quick links</h3>
+			<a href="#"> <i class="fas fa-phone"></i>+123-456-789</a>
+			<a href="#"> <i class="fas fa-phone"></i>+111-444-777</a>
+			<a href="#"> <i class="fas fa-envelope"></i>rentalwheels@hotmail.com</a>
+			<a href="#"> <i class="fas fa-map-marker-alt"></i> Chandigarh, India - 160030</a>
+		</div>
+
+		<div class="box">
+			<h3>quick links</h3>
+			<a href="#"> <i class="fab fa-facebook"></i> facebook </a>
+			<a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+			<a href="#"> <i class="fab fa-linkedin"></i> Linkedin </a>
+			<a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
+		</div>
+
+
+		
+
+
+	</div>
+</section>
+
+
+
+
+<script src="script.js"></script>	
+</body>
+</html>
